@@ -16,7 +16,7 @@ const ApartmentDetails = (props) => {
     const [info, setInfo] = useState({}); 
 
     useEffect(()=>{
-        fetch('http://localhost:3030/house')
+        fetch('https://damp-garden-40169.herokuapp.com/house')
         .then(res=> res.json())
         .then(data=> {
         const house = data.filter(dt => dt._id == houseId) 
@@ -37,7 +37,7 @@ const ApartmentDetails = (props) => {
         formData.append('email', info.email)
         formData.append('number', info.number)
         formData.append('message', info.message)
-        fetch('http://localhost:3030/addRequest',{
+        fetch('https://damp-garden-40169.herokuapp.com/addRequest',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

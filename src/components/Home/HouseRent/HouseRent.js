@@ -5,7 +5,7 @@ import HouseRentCart from '../HouseRent-cart/HouseRentCart';
 const HouseRent = () => {
     const [house, setHouse] = useState([]); 
     useEffect(()=>{
-        fetch('http://localhost:3030/house')
+        fetch('https://damp-garden-40169.herokuapp.com/house')
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
