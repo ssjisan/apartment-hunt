@@ -7,7 +7,6 @@ import pic10 from '../../../images/Rectangle 409.png';
 import pic11 from '../../../images/Rectangle 410.png';
 import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
-import fakeData from '../../../fakeData';
 import HouseRent from '../../Home/HouseRent/HouseRent';
 import { UserContext } from '../../../App';
 
@@ -16,6 +15,8 @@ const ApartmentDetails = (props) => {
     const { houseId } = useParams();
     console.log(houseId);
     const [home, setHome] = useState([]);
+    const [info, setInfo] = useState({}); 
+
     useEffect(()=>{
         fetch('http://localhost:3030/house')
         .then(res=> res.json())
@@ -25,9 +26,31 @@ const ApartmentDetails = (props) => {
         console.log(house);
         })
     },[])
-    // const { title, img, img1, img2, img3, img4, price, apartmentDescription, priceDetails, propertyDetails } = selectedHouse;
-    const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit,  errors } = useForm();
+    const handleBlur = (e) =>{
+        const newInfo = {...info};
+        newInfo[e.target.name] = e.target.value;
+        setInfo(newInfo);
+    }
+    const onSubmit = data=>{
+        const formData = new FormData()
+        // formData.append('service', info.service)
+        formData.append('name', info.name)
+        formData.append('email', info.email)
+        formData.append('number', info.number)
+        formData.append('message', info.message)
+        fetch('http://localhost:3030/addBooking',{
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(success=>{
+            if(success){
+                alert('Appointment Confirm');
+            }
+        })
+    }
     return (
         <div className="apartmentDetails-container">
             <div className="container">
@@ -76,22 +99,22 @@ const ApartmentDetails = (props) => {
 
                         <form className="apartment-form" onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
-                                <input type="text" ref={register({ required: true })} name="name" defaultValue={loggedInUser.name} placeholder="Full Name" className="form-control" />
+                                <input type="text" onBlur={handleBlur} ref={register({ required: true })} name="name" defaultValue={loggedInUser.name} placeholder="Full Name" className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
                             </div>
 
                             <div className="form-group">
-                                <input type="number" ref={register({ required: true })} name="number" placeholder="Phone No." className="form-control" />
+                                <input type="number"  onBlur={handleBlur} ref={register({ required: true })} name="number" placeholder="Phone No." className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
                             </div>
 
                             <div className="form-group">
-                                <input type="text" ref={register({ required: true })} name="email" defaultValue={loggedInUser.email} placeholder="Email Address" className="form-control" />
+                                <input type="text"  onBlur={handleBlur} ref={register({ required: true })} name="email" defaultValue={loggedInUser.email} placeholder="Email Address" className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
                             </div>
 
                             <div className="form-group">
-                                <textarea type="text" rows="8" ref={register({ required: true })} name="massage" placeholder="Massage..." className="form-control" />
+                                <textarea type="text" rows="8"  onBlur={handleBlur} ref={register({ required: true })} name="message" placeholder="Message..." className="form-control" />
                                 {errors.email && <span className="text-danger">This field is required</span>}
                             </div>
 
