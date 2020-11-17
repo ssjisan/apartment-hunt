@@ -4,10 +4,8 @@ import pic7 from '../../../images/Rectangle 406.png';
 import pic8 from '../../../images/Rectangle 407.png';
 import pic9 from '../../../images/Rectangle 408.png';
 import pic10 from '../../../images/Rectangle 409.png';
-import pic11 from '../../../images/Rectangle 410.png';
 import { useForm } from 'react-hook-form';
-import { Link, useParams } from 'react-router-dom';
-import HouseRent from '../../Home/HouseRent/HouseRent';
+import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 
 const ApartmentDetails = (props) => {
@@ -39,7 +37,7 @@ const ApartmentDetails = (props) => {
         formData.append('email', info.email)
         formData.append('number', info.number)
         formData.append('message', info.message)
-        fetch('http://localhost:3030/addBooking',{
+        fetch('http://localhost:3030/addRequest',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -99,7 +97,7 @@ const ApartmentDetails = (props) => {
 
                         <form className="apartment-form" onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
-                                <input type="text" onBlur={handleBlur} ref={register({ required: true })} name="name" defaultValue={loggedInUser.name} placeholder="Full Name" className="form-control" />
+                                <input type="text" onBlur={handleBlur} ref={register({ required: true })} name="name"  placeholder="Full Name" className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
                             </div>
 
@@ -109,7 +107,7 @@ const ApartmentDetails = (props) => {
                             </div>
 
                             <div className="form-group">
-                                <input type="text"  onBlur={handleBlur} ref={register({ required: true })} name="email" defaultValue={loggedInUser.email} placeholder="Email Address" className="form-control" />
+                                <input type="text"  onBlur={handleBlur} ref={register({ required: true })} name="email"  placeholder="Email Address" className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
                             </div>
 
@@ -119,9 +117,9 @@ const ApartmentDetails = (props) => {
                             </div>
 
                             <div className="form-group">
-                                <Link to="/myRent">
+                                
                                     <button type="submit" className="btn-modify form-control">Submit</button>
-                                </Link>
+                
 
                             </div>
                         </form>
