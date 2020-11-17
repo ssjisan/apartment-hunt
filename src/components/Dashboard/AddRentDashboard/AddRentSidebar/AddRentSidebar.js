@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './AddRentSidebar.css'
+import './AddRentSidebar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faCheckSquare, faCity } from '@fortawesome/free-solid-svg-icons'
 import { faBuromobelexperte } from '@fortawesome/free-brands-svg-icons'

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Service.css';
+import './Service.scss';
 import logo1 from '../../../logos/apartment 1.png';
 import logo2 from '../../../logos/affordable 1.png';
 import logo3 from '../../../logos/lessee 1.png';

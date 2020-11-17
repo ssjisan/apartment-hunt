@@ -1,5 +1,5 @@
 import React from 'react';
-import './HouseRentCart.css';
+import './HouseRentCart.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faBath, faBed } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';

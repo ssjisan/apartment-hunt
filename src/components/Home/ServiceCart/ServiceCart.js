@@ -1,5 +1,5 @@
 import React from 'react';
-import './ServiceCart.css';
+import './ServiceCart.scss';
 
 const ServiceCart = ({ service }) => {
     return (

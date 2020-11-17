@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './ApartmentDetails.css';
+import './ApartmentDetails.scss';
 import pic7 from '../../../images/Rectangle 406.png';
 import pic8 from '../../../images/Rectangle 407.png';
 import pic9 from '../../../images/Rectangle 408.png';

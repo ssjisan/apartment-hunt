@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './HouseRent.css';
+import './HouseRent.scss';
 import HouseRentCart from '../HouseRent-cart/HouseRentCart';
 
 const HouseRent = () => {

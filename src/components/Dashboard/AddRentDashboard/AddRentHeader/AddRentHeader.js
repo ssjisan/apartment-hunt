@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './AddRentHeader.css';
+import './AddRentHeader.scss';
 import logo from '../../../../logos/Logo.png';
 import { UserContext } from '../../../../App';
 
