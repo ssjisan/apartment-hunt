@@ -36,9 +36,11 @@ const Navbar = () => {
                             <a class="nav-link" href="#">Dashboard</a>
                         </li>
                     </Link>
-                    <li class="nav-item nav-btn">
-                        <a class="nav-link " href="#">Login</a>
-                    </li>
+                    <Link to="/login">
+                        <li class="nav-item nav-btn">
+                            <a class="nav-link " href="#">Login</a>
+                        </li>
+                    </Link>
                 </ul>
             </div>
         </nav>
