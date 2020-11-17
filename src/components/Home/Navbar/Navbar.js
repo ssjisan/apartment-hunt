@@ -37,9 +37,15 @@ const Navbar = () => {
                         </li>
                     </Link>
                     <Link to="/login">
+<<<<<<< HEAD
                     <li class="nav-item nav-btn">
                         <a class="nav-link " href="#login">Login</a>
                     </li>
+=======
+                        <li class="nav-item nav-btn">
+                            <a class="nav-link " href="#">Login</a>
+                        </li>
+>>>>>>> b8a21803948b7ea00a8e89b5f5ccbe85d84f7fb2
                     </Link>
                 </ul>
             </div>
