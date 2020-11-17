@@ -1,0 +1,19 @@
+.serviceCard-container{
+    text-align: center;
+    font-family: Poppins;
+}
+.service-img{
+    width: 80px;
+    height: 80px;
+}
+.card-content{
+    height: 100%;
+    padding: 12%;
+}
+.card-content img{
+    margin-bottom: 20px;
+}
+.card-content h5{
+    margin-bottom: 10px;
+    font-weight: 700;
+}

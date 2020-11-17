@@ -1,0 +1,25 @@
+.footer-container {
+    background:#275A53;
+    color:#fff;
+}
+.fa{
+    color: white;
+    padding: 10px 12px;   
+}
+.footer-content{
+    padding:50px;
+}
+.footer-content p{
+    margin:0px;
+    padding:0px;
+}
+.footer-content h5{
+    margin-bottom: 20px;
+}
+.footer-content-address{
+    margin-top: 20px;
+}
+.map{
+    margin-right: -17px;
+    margin-top: 2px;
+}

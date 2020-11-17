@@ -1,0 +1,43 @@
+/* .headerMain-container{
+    background-image: url(../../../images/Rectangle\ 13.png) ;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    opacity: 0.5;
+    background: rgba(196, 91, 91, 0.7);
+    
+} */
+
+.apartment-container{
+    position: relative;
+    background-color: #000;
+}
+
+.apartment-container::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.5;
+    background:       url(../../../images/Rectangle\ 13.png) no-repeat;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+.apartment{
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.apartment-content h1{
+    text-align: center;
+    color: #fff;
+    font-size:48px;
+    font-weight:700;
+    line-height:58px;
+    padding-top: 8%;
+}

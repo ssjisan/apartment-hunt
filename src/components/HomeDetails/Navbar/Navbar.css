@@ -1,0 +1,13 @@
+nav{
+    margin: 20px 0px;
+}
+nav img{
+    width: 30%;
+}
+nav ul li a{
+    font-size: 20px;
+    font-weight: 700;
+}
+nav ul li{
+    padding: 0px 10px;
+}
