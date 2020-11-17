@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddRentBody.css';
+import './AddRentBody.scss';
 import {  faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const AddRentBody = () => {

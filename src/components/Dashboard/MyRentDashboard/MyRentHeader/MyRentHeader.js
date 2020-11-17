@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './MyRentHeader.css';
+import './MyRentHeader.scss';
 import logo from '../../../../logos/Logo.png';
 import { UserContext } from '../../../../App';
 

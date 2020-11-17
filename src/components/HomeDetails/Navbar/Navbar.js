@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './Navbar.css';
+import './Navbar.scss';
 import logo from '../../../logos/Logo.png';
 import { Nav } from 'react-bootstrap';
 import { UserContext } from '../../../App';

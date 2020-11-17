@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import './Login.css';
+import './Login.scss';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import { CreateUserWithEmailAndPassword, handleFbLogin, handleGoogleSignIn, handleSignOut, initializeLoginFramework, signInWithEmailAndPassword } from './loginManager';
